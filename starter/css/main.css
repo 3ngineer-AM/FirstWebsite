@@ -349,7 +349,7 @@ Page
 */
 
 .page {
-  background: red;
+  /* background: red; */
   width: 90vw;
   max-width: var(--max-width);
   margin: 0 auto;
@@ -379,6 +379,111 @@ Footer
 .page-footer a {
   color: var(--primary-500);
 }
+
+/*
+=============== 
+Hero
+===============
+*/
+
+/* Approach is to make the parent hero position relative and then set the children and descendants position absolute so that they are modified relative to the parent */
+.hero {
+  height: 40vh;
+  background: url(../assets/main.jpg) center/cover no-repeat;
+  margin-bottom: 2rem;
+  border-radius: var(--borderRadius);
+  position: relative;
+}
+.hero-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: var(--borderRadius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-text {
+  text-align: center;
+  color: var(--white);
+}
+@media screen and (min-width: 768) {
+  .hero-text h1 {
+    font-size: 4rem;
+    margin-bottom: 0;
+  }
+}
+
+/*
+=============== 
+Exercises
+===============
+*/
+
+.exercises-container {
+  display: grid;
+  gap: 2rem 1rem;
+  border: 2px solid red;
+}
+.tags-container {
+  border: 2px solid blue;
+  order: 1;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 3rem;
+}
+.exercises-list{
+  border: 2px solid green;
+  display: grid;
+  gap: 2rem 1 rem;
+  padding-bottom: 3rem;
+}
+.tags-container h4{
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+.tags-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.tags-list a {
+  text-transform: capitalize;
+  display: block;
+  color: var(--grey-500);
+  transition: var(--transition);
+}
+.tags-list a:hover {
+  color: var(--primary-500);
+}
+.exercise {
+  display: block
+}
+.exercise-img {
+  height: 25rem;
+  border-radius: var(--borderRadius);
+  margin-bottom: 1rem;
+  
+
+}
+.exercise h5 {
+  margin-bottom: 0;
+  line-height: 1;
+  color: var(--grey-700);
+}
+.exercise p {
+  margin-bottom: 0;
+  line-height: 1;
+  margin-top: 0.5rem;
+  color: var(--grey-500);
+  letter-spacing: var(--letterSpacing);
+}
+
+
+
+
 
 /*
 =============== 

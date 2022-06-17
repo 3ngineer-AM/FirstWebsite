@@ -51,7 +51,7 @@ html {
   --borderRadius: 0.25rem;
   --letterSpacing: 1px;
   --transition: 0.3s ease-in-out all;
-  --max-width: 1120px;
+  --max-width: 1280px;
   --fixed-width: 600px;
 
   /* box shadow*/
@@ -426,19 +426,16 @@ Exercises
 .exercises-container {
   display: grid;
   gap: 2rem 1rem;
-  border: 2px solid red;
 }
 .tags-container {
-  border: 2px solid blue;
   order: 1;
   display: flex;
   flex-direction: column;
   padding-bottom: 3rem;
 }
 .exercises-list{
-  border: 2px solid green;
   display: grid;
-  gap: 2rem 1 rem;
+  gap: 2rem 1rem;
   padding-bottom: 3rem;
 }
 .tags-container h4{
@@ -465,7 +462,6 @@ Exercises
   height: 25rem;
   border-radius: var(--borderRadius);
   margin-bottom: 1rem;
-  
 
 }
 .exercise h5 {
@@ -481,8 +477,37 @@ Exercises
   letter-spacing: var(--letterSpacing);
 }
 
-
-
+@media screen and (min-width: 700px) {
+  .exercises-list {
+    grid-template-columns: 1fr 1fr;
+  }
+  .exercise-img {
+    height: 20rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .exercises-container {
+    grid-template-columns: 200px 1fr;
+  }
+  .exercise p {
+    font-size: 0.85rem;
+  }
+  .tags-container {
+    order: 0;
+  }
+  .tags-list {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .exercises-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .exercise h5 {
+    font-size: 1.15rem;
+  }
+}
+ 
 
 
 /*
